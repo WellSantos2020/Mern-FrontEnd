@@ -1,6 +1,6 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
-
+import Navigation from './Navigation'
 export default function Landing() {
     const style1={
         width: "100%",
@@ -14,13 +14,24 @@ export default function Landing() {
         
 
         
+
     }
+
+   
+
+
     return(
        
+    
+
        
        <div style={style1}>
+           < Navigation />
+          
+                 
           <div style={style2}> 
               <img src='images/MytineraryLogo.png' width="375px" ></img>
+
               <p>Find your perfect trip,designed by who know and love their cities.</p>
          </div>
            
@@ -32,14 +43,16 @@ export default function Landing() {
          
          <div>
              <p>Want to build your own Mytinerary?</p>
-             <a href="url" style={{marginRight:"100px"}} >Login</a> 
+             <a href="#" class="google btn"i class="fa fa-google fa-fw" >Login </a> 
+             
              <a href="url">Create Account</a>
             
             </div>
          <div>
          <footer style={{marginTop:"40px"}} ><img src='images/homeIcon.png' width="40px" ></img> </footer>
-         </div>
-         </div> 
+        </div>
+        </div>
+        
          
                
          
