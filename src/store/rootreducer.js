@@ -4,7 +4,8 @@ import itineraryReducer from "./reducers/itineraryReducer";
 import activitiesReducer from "./reducers/activityReducer";
 import userReducer from "./reducers/userReducer";
 import authReducer from "./reducers/authReducer";
-const rootReducer = combineReducers({cities: citiesReducer,itineraries: itineraryReducer,activities: activitiesReducer, user: userReducer, auth: authReducer});
+import commentsReducer from "./reducers/commentsReducer";
+const rootReducer = combineReducers({cities: citiesReducer,itineraries: itineraryReducer,activities: activitiesReducer, user: userReducer, auth: authReducer, comments: commentsReducer, });
 
 
 export default rootReducer;

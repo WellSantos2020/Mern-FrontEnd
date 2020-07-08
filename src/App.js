@@ -7,7 +7,8 @@ import Itinerary from './components/Itinerary';
 import CreateAccount from './components/CreateAccount';
 import Login from './components/Login'
 import {loadUser} from './store/actions/authActions';
-
+import Test from './components/Test';
+import Comments from './components/Comments';
 
 
  
@@ -24,6 +25,7 @@ export default function App() {
               <Route path='/itineraries' component={Itinerary}/>
               <Route path='/register' component={CreateAccount}/>
               <Route path='/Login' component={Login}/>
+              <Route path='/comment' component={Comments}/>
              
             </Switch>
         </div>

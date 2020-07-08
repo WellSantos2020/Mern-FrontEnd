@@ -1,8 +1,9 @@
-import {GET_USER} from "../actions/types"
-import {LOG_OUT}  from "../actions/types"
+import {GET_USER,LOG_OUT,ADD_FAVORITES,REMOVE_FAVORITES,GET_FAV} from "../actions/types"
+
 
 const initialState ={
-    items:[]
+    items:[],
+    favoriteItineraries:[]
 }
 
 
@@ -34,8 +35,29 @@ export default function user(state = initialState , action) {
 
         }
       
+        case ADD_FAVORITES:    
+        return {
+          ...state,
+          
+            favoriteItineraries: action.payload,
+        }
+        case REMOVE_FAVORITES:    
+        return {
+          ...state,
+          
+            favoriteItineraries: action.payload,
+        }
+       
+        case GET_FAV:    
+        return {
+          ...state,
+          
+            favoriteItineraries: action.payload,
+        }
+
       default:
         return state
+
     }
   }
 
