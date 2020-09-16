@@ -1,9 +1,12 @@
     import React, { Component } from 'react'
-    import { connect } from 'react-redux'
+    import { connect } from 'react-redux';
     import {getComments} from "../store/actions/commentActions";
-import { Card } from 'react-bootstrap';
+    import { Card } from 'react-bootstrap';
+    import {AiOutlineCloseCircle} from 'react-icons/ai';
+    import dateFormat from 'dateformat';
+    import { BsArrowReturnLeft } from "react-icons/bs";
     
-    
+ 
     class Comments extends Component {
         constructor(props){
             super(props)     
@@ -19,7 +22,7 @@ import { Card } from 'react-bootstrap';
         
        componentDidMount(){
 
-        this.props.getComments("5e615f0d1c9d44000056c330")
+        this.props.getComments(this.props.id )
 
        }
 
@@ -40,38 +43,37 @@ import { Card } from 'react-bootstrap';
         
          */
         render() {
+
+          
             return (
+            
+              
                 <div>
+                    
                    {this.props.comments.map(comment=>{
+                       
+                       const now = dateFormat(comment.date, " mmmm dS, yyyy");
+                  
                       return(
                       <div>
+                          
                           <img src={comment.userpicture} height="40px"/>
-                       <h4>{comment.text}</h4>
+                       <div type="close" className="close-button" style={{borderRadius:"30px"}} > <AiOutlineCloseCircle/> </div>
+                       <h6>{comment.name}</h6>
+                       <p>{comment.text} </p>
+                       <p>{now}</p>
+                       <div type="return" className="return-button" style={{borderRadius: "10px"}}> <BsArrowReturnLeft/></div>
                       </div>
                      )
                    })} 
-                 {/*   <Card  htmlFor="name"> <b>Name</b> </Card>
-                   <input 
-                            type="text" 
-                            placeholder="Enter your name" 
-                            name="name" required 
-                            vaule={this.state.name}
-                            onChange={this.addChange}>
-                        </input>
-                    
-                        <Card htmlFor="text"><b>Text:</b></Card>
-                        <input 
-                            type="text" 
-                            placeholder="Enter your Comments" 
-                            name="Comments" required
-                            vaule={this.state.email}
-                            onChange={this.addChange}>
-                        </input>
- */}
+                 
                 
                 
                 </div>
+            
+     
             )
+            
         }
     }
     const mapStateToProps=state=>({

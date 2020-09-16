@@ -69,8 +69,8 @@ import Navigation from './Navigation';
                                     myCity:city
                                     }
                                     }}>
-                                         <Card className="bg-dark text-white" style={{ width: '23rem',height:180,margin:10 }}>
-                                    <Card.Img src= {city.img} alt="Card image" />
+                                         <Card className="bg-dark text-white" style={{ width: '23rem',height:180,margin:5,borderRightWidth:'4px',borderLeftWidth:'2px'}}>
+                                    <Card.Img style={{height:'177px',borderRightWidth:'2px'}} src= {city.img} alt="Card image" />
                                     <Card.ImgOverlay>
                                     <Card.Title>{city.name}</Card.Title>
                                         

@@ -10,6 +10,7 @@ class Login extends Component {
             
             email:"",
             password:"",
+           
             
 
 
@@ -46,7 +47,7 @@ class Login extends Component {
                             type="text" 
                             placeholder="Enter your email" 
                             name="email" required
-                            vaule={this.state.email}
+                            value={this.state.email}
                             onChange={this.addChange}>
                         </input>
                         <label htmlFor="psw"><b>Password</b></label>

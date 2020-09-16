@@ -13,12 +13,16 @@ import {GET_CITIES} from "./types";
 } */
 
 export const getCities = () => dispatch => {
+    console.log('get cities')
     fetch('http://localhost:5000/cities/all')
         .then(res => res.json())
-        .then(cities =>
+        .then(cities =>{
+          console.log(cities)
             dispatch({
                 type: GET_CITIES,
                 payload: cities
             })
+        }
+            
         );
 };

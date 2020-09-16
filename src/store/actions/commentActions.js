@@ -24,13 +24,14 @@ export const getComments = (id) => dispatch => {
 
 
 
-export const postComments = (id) => dispatch => {
-    const body=JSON.stringify({text:""})
-    
-    fetch(`http://localhost:5000/comments/${id}`,{
+export const postComments = (id, text) => dispatch => {
+    const body=JSON.stringify({text})
+    console.log(body)
+    console.log(id)
+    fetch(`http://localhost:5000/comments/addcomments/${id}`,{
  
     method: "POST",
-    headers:{"Content-Type":"application/json"},
+    headers:{"Content-Type":"application/json","Authorization":`bearer ${localStorage.token}`},
     body
 
 })

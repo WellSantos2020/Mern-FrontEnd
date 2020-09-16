@@ -161,3 +161,18 @@ const mapStateToProps = state=>({
 })
 export default connect(mapStateToProps, {getItineraries,addFavorites,removeFavorites,getfav})(Test);
 
+{/* <input 
+type="text" 
+placeholder="Enter your comment" 
+value={this.state.comment}
+onChange={this.addChange}>
+</input>
+<Form.Group controlId="exampleForm.ControlTextarea1"  > 
+
+<Form.Label >Comments </Form.Label>
+<Form.Label class="fas fa-caret-right"></Form.Label> 
+<Form.Control as="textarea" rows="3"   />
+<div variant="primary" type="submit" >
+<AiFillCaretRight />
+</div>
+</Form.Group> */}
